@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moefer Login</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+    }
+    
+    .container {
+        background-color: rgb(48, 48, 241);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-bottom: 6px;
+    }
+    
+    input {
+        padding: 8px;
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        background-color: rgb(35, 209, 0);
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    
+    button:hover {
+        background-color: black;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <form id="form" action="homepage.html" method="get">
+            <h2>Login</h2>
+            <label for="email">Username:</label>
+            <input type="email" id="email" name="Username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" value="LOG IN" id="btn">
+
+            <script>
+                const email = document.getElementById('email')
+                const password = document.getElementById('password')
+                const form = document.getElementById('form')
+            
+                form.addEventListener('submit', (e) => {
+                  let messages = []
+                  if (password.value !== 'omega123') {
+                  alert("invalid password!");
+                  e.preventDefault()
+                  errorElement.innerText = messages.join(', ')
+                }
+            
+                  if (email.value !== 'omega@gmail.com') {
+                  alert("invalid email!");
+                  e.preventDefault()
+                  errorElement.innerText = messages.join(', ')
+                }
+                })
+              </script>
+        </form>
+    </div>
+</body>
+</html>
